@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+    <formset>
+
+        <form name="CheckBean">
+            <field
+                property="email"
+                depends="required,email">
+                    <arg0 key="input.email"/>
+            </field>
+            <field
+                property="credit"
+                depends="required,creditCard">
+                    <arg0 key="input.credit"/>
+            </field>
+            <field
+                property="url"
+                depends="required,url">
+                    <arg0 key="input.url"/>
+            </field>
+        </form>
+   </formset>
+</form-validation>
